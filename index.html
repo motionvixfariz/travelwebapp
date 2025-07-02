@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Holidays - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<!-- Font Awesome for stars -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .stylish-heading {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+.hero-section p {
+  font-family: 'Raleway', sans-serif;
+}
+
+    .trending-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .trending-box:hover {
+      transform: scale(1.02);
+    }
+    .trending-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .trending-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .trending-info h5 {
+      margin: 0;
+    }
+    .hero-section {
+      background: url('images/intro/travel-concept-with-landmarks.jpg') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    .nav-link {
+      scroll-behavior: smooth;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    .popular-section {
+    position: relative;
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+.popular-section .bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 1;
+}
+.popular-section .auto-container {
+    position: relative;
+    z-index: 2;
+}
+.title-box.centered {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.title-box .subtitle {
+    font-size: 18px;
+    color: #ff5722;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.title-box h2 {
+    font-size: 36px;
+    color: #222;
+    font-weight: 700;
+}
+.trek-block-one {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.trek-block-one .image-box .image img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.lower-content {
+    padding: 20px;
+}
+.lower-content h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.lower-content .ratings .stars i {
+    color: #f39c12;
+}
+.lower-content .text {
+    font-size: 14px;
+    color: #555;
+}
+.bottom-box {
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+.theme-btn {
+    display: inline-block;
+    background: #ff5722;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.theme-btn:hover {
+    background: #e64a19;
+}
+
+
+.about-section {
+  background: url('/images/intro/about-2.jpg') no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+}
+
+.about-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.about-section .stylish-heading {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+
+/* Quick Link Hover Effect */
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #ffc107; /* Bootstrap warning color */
+  text-decoration: underline;
+}
+
+/* Social Icon Styling */
+.social-icon {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #ccc;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+
+/* Scroll-to-Top Button with Animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 85px;
+  right: 25px;
+  background-color: #ffc107;
+  color: #111;
+  padding: 10px 13px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  animation: bounce 1.2s infinite;
+}
+
+.scroll-top-btn:hover {
+  background-color: #ffca2c;
+  color: #000;
+}
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Budget Holidays</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tour Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="domestic.html">Domestic Tour Packages</a></li>
+            <li><a class="dropdown-item" href="international.html">International Tour Packages</a></li>
+          </ul>
+        </li>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="flight-booking.html">Flight Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Budget Holidays</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tour Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="domestic.html">Domestic Tour Packages</a></li>
+            <li><a class="dropdown-item" href="international.html">International Tour Packages</a></li>
+          </ul>
+        </li>
+        </li>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="flight-booking.html">Flight Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Hero / Intro Section -->
+<section class="hero-section" id="home">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
+<div style="background: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 10px;">
+  <h1 class="display-4 fw-bold stylish-heading">Plan your The Best <br><span class="text-warning">Travelling</span></h1>
+  <p class="lead mt-3 text-light">
+    Welcome to Budget Holidays, where each journey is a tapestry of vivid memories and dreams come to life. Our passion is to weave your travel aspirations into breathtaking realities.
+  </p>
+  <div class="mt-4">
+    <a href="#trending" class="btn btn-outline-light me-2">View All <i class="fas fa-arrow-right"></i></a>
+    <a href="#whychoose" class="btn btn-warning">Read More</a>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<!-- <section class="py-5 bg-light" id="about">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+        <h2 class="fw-bold">About Budget Holidays</h2>
+        <h5 class="text-primary">World Best Travel Agency</h5>
+        <p class="mt-3">
+          At Budget Holidays, we pride ourselves on delivering a service that's as unique as each of our guests' dreams. With a promise to be a constant guardian and guide on their travel journey, we ensure that every interaction is imbued with our best, most thoughtful options.
+        </p>
+        <p>
+          Our ethos is steeped in the pursuit of customer satisfaction — it is the compass that guides every decision we make. The tapestry of our success is interwoven with the threads of joy and contentment from our guests.
+        </p>
+        <p>
+          Their glowing testimonials and gracious referrals are the echoes of our fulfilled promise, resonating as a testament to the heartfelt experiences we've shared.
+        </p>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fas fa-shield-alt text-primary me-2"></i> Travel insurance</li>
+          <li class="list-group-item"><i class="fas fa-ambulance text-danger me-2"></i> Emergency Services</li>
+          <li class="list-group-item"><i class="fas fa-hand-holding-usd text-success me-2"></i> Pricing Flexibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="about" class="about-section position-relative py-5">
+  <div class="overlay"></div>
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+        <img src="images/intro/17544016_2001.i126.009_travel_booking_compositions-04.svg" alt="About Travel" class="img-fluid rounded shadow-lg" />
+      </div>
+      <div class="col-md-6 text-white" data-aos="fade-left">
+        <h2 class="mb-4 stylish-heading">About <span class="fw-bold text-warning">Budget Holidays</span></h2>
+        <p>
+          Budget Holidays is your trusted travel companion, curating unforgettable adventures that blend affordability and luxury. With us, you don't just travel—you live your dream journey.
+        </p>
+        <p>
+          Our expert team ensures every trip is customized to suit your budget and preferences. From serene landscapes to vibrant cityscapes, we cover it all.
+        </p>
+        <a href="about.html" class="btn btn-warning mt-3">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Section -->
+<section class="py-5 bg-white" id="whychoose">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Why Choose <span class="fw-bold text-warning">Budget Holidays</span></h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="p-4 border rounded text-center h-100">
+          <i class="fas fa-tags fa-2x text-warning mb-3"></i>
+          <h5 class="fw-bold">Best Rate</h5>
+          <p>At Budget Holidays, affordability intersects with luxury. We negotiate fiercely to ensure your adventures are cost-effective.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 border rounded text-center h-100">
+          <i class="fas fa-users fa-2x text-warning mb-3"></i>
+          <h5 class="fw-bold">Best Staff</h5>
+          <p>Our team is passionate and knowledgeable, ensuring every journey is seamless and memorable.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 border rounded text-center h-100">
+          <i class="fas fa-globe-asia fa-2x text-warning mb-3"></i>
+          <h5 class="fw-bold">Diverse Destinations</h5>
+          <p>From the Maldives to Bali, we offer a rich variety of destinations to suit every travel dream.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6" data-aos="fade-up">
+        <div class="p-4 border rounded text-center h-100">
+          <i class="fas fa-headset fa-2x text-warning mb-3"></i>
+          <h5 class="fw-bold">Swift Assistance</h5>
+          <p>Quick help whenever you need it. Our team ensures you can relax and enjoy your holiday.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6" data-aos="fade-up">
+        <div class="p-4 border rounded text-center h-100">
+          <i class="fas fa-handshake fa-2x text-warning mb-3"></i>
+          <h5 class="fw-bold">Best Customer Service</h5>
+          <p>From first contact to return, we're by your side, creating smooth, personalized travel experiences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Trending Destinations Section -->
+  <section class="py-5 bg-light" id="trending">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Trending Destinations</h2>
+        <p class="text-muted">Since 2014, we’ve helped more than 500,000 people of all ages enjoy the best outdoor experience of their lives. Whether it’s for one day or a two-week vacation, close to home or a foreign land.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="trending-box">
+            <img src="images/locations/maldives.jpg" alt="Maldives" class="trending-img" />
+            <div class="trending-info">
+              <h5>Maldives</h5>
+              <a href="/tourpackages/maldives-package.html" class="text-white"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trending-box">
+            <img src="images/locations/dubai.jpg" alt="Dubai" class="trending-img" />
+            <div class="trending-info">
+              <h5>Dubai</h5>
+              <a href="/tourpackages/dubai-package.html" class="text-white"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trending-box">
+            <img src="images/locations/thailand.jpg" alt="Thailand" class="trending-img" />
+            <div class="trending-info">
+              <h5>Thailand</h5>
+              <a href="/tourpackages/thailand-package.html" class="text-white"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trending-box">
+            <img src="images/locations/malysia.jpg" alt="Malaysia" class="trending-img" />
+            <div class="trending-info">
+              <h5>Malaysia</h5>
+              <a href="/tourpackages/malaysia-package.html" class="text-white"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trending-box">
+            <img src="images/locations/bali.jpg" alt="Bali" class="trending-img" />
+            <div class="trending-info">
+              <h5>Bali</h5>
+              <a href="/tourpackages/bali-package.html" class="text-white"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="trending-box">
+            <img src="images/locations/vietnam.jpg" alt="Vietnam" class="trending-img" />
+            <div class="trending-info">
+              <h5>Vietnam</h5>
+              <a href="/tourpackages/vietnam-package.html" class="text-white"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-warning">Load More...</a>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Popular Section -->
+<section class="popular-section style-two position-relative text-white py-5" style="background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('images/intro/woman-posing-luggage-while-holding-smartphone-plane-tickets.jpg') center center/cover no-repeat;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="subtitle text-warning fw-semibold">Modern & Beautiful</div>
+      <h2 class="fw-bold display-5 text-white">Our Most Popular Tour Packages</h2>
+    </div>
+    <div class="owl-carousel popular-carousel owl-theme">
+
+      <!-- START: Tour Card - Adventure Tours -->
+      <div class="card bg-white text-dark border-0 shadow-sm rounded overflow-hidden">
+        <img src="./images/special tour/adventure.jpg" class="card-img-top" alt="Adventure Tours" loading="lazy">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Adventure Tours</h4>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="text-warning small">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <div class="text-muted small">05 Reviews</div>
+          </div>
+          <p class="card-text flex-grow-1">Ideal for thrill-seekers, these tours include hiking, rafting, and zip-lining for adrenaline-packed experiences.</p>
+          <a href="contact.html" class="btn btn-warning w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+      <!-- START: Tour Card - Eco Tours -->
+      <div class="card bg-white text-dark border-0 shadow-sm rounded overflow-hidden">
+        <img src="./images/special tour/eco-tour.jpg" class="card-img-top" alt="Eco Tours" loading="lazy">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Eco Tours</h4>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="text-warning small">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <div class="text-muted small">05 Reviews</div>
+          </div>
+          <p class="card-text flex-grow-1">Sustainable travel focused on conservation, nature appreciation, and local culture immersion.</p>
+          <a href="contact.html" class="btn btn-warning w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+      <!-- START: Tour Card - Family Vacations -->
+      <div class="card bg-white text-dark border-0 shadow-sm rounded overflow-hidden">
+        <img src="./images/special tour/family-vaction.jpg" class="card-img-top" alt="Family Vacations" loading="lazy">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title">Family-Friendly Vacations</h4>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="text-warning small">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+            </div>
+            <div class="text-muted small">05 Reviews</div>
+          </div>
+          <p class="card-text flex-grow-1">Perfect for all ages with activities, entertainment, and leisure time for the entire family.</p>
+          <a href="contact.html" class="btn btn-warning w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Add more cards below in same style for Honeymoon, City Breaks, Cruises -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Include Owl Carousel dependencies if not already -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.popular-carousel').owlCarousel({
+      loop:true,
+      margin:20,
+      nav:true,
+      dots:false,
+      autoplay:true,
+      autoplayTimeout:4000,
+      responsive:{
+        0:{ items:1 },
+        768:{ items:2 },
+        992:{ items:3 }
+      }
+    });
+  });
+</script>
+
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float position-fixed" style="bottom: 25px; right: 25px; z-index: 999;">
+  <a href="https://wa.me/919876543210" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp" title="Chat on WhatsApp">
+  </a>
+</div>
+
+<!-- CTA Contact Section -->
+<section id="contact" class="py-5 bg-light text-center border-top">
+  <div class="container" data-aos="fade-up">
+    <h2 class="fw-bold">Let’s Plan Your Next Adventure</h2>
+    <p class="lead mb-4">Need help? We’re just a message away. Explore the world with Budget Holidays.</p>
+    <a href="contact.html" class="btn btn-warning btn-lg px-4">Contact Us <i class="fas fa-paper-plane ms-2"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 position-relative">
+  <div class="container">
+    <div class="row gy-4 text-start">
+      <!-- Logo / About -->
+      <div class="col-md-4">
+        <h5 class="fw-bold">Budget Holidays</h5>
+        <p>Your trusted partner in budget-friendly domestic and international travel packages.</p>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h6 class="fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="domestic.html" class="footer-link">Domestic Tours</a></li>
+          <li><a href="international.html" class="footer-link">International Tours</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Contact Info -->
+      <div class="col-md-4">
+        <h6 class="fw-bold">Contact Info</h6>
+        <p><i class="fas fa-phone-alt me-2"></i>+91 98765 43210</p>
+        <p><i class="fas fa-envelope me-2"></i>info@budgetholidays.com</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i>123 Main Street, Kochi, India</p>
+        <div class="mt-3">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <hr class="border-light mt-4">
+    <div class="text-center pb-3">
+      &copy; 2025 Budget Holidays | Designed with ❤️ for travel lovers.
+    </div>
+  </div>
+    <!-- Scroll to top arrow -->
+  <a href="#top" id="scrollTopBtn" class="scroll-top-btn">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  const navbar = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".popular-carousel").owlCarousel({
+            loop:true,
+            margin:30,
+            nav:true,
+            dots:true,
+            autoplay:true,
+            autoplayTimeout:5000,
+            smartSpeed:700,
+            navText: ['<span class="fa fa-angle-left"></span>','<span class="fa fa-angle-right"></span>'],
+            responsive:{
+                0:{ items:1 },
+                600:{ items:2 },
+                1000:{ items:3 }
+            }
+        });
+    });
+</script>
+
+
+<!-- scroll button -->
+<script>
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+</script>
+
+
+</body>
+</html>
